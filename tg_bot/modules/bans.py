@@ -41,11 +41,11 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("I really wish I could ban admins...")
+        message.reply_text("Banti hai apun apne boss ko nhi ban krta...")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy?")
+        message.reply_text("Banti toh chutiya hai khud ko ban krlega hai na?")
         return ""
 
     log = "<b>{}:</b>" \
