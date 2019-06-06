@@ -26,9 +26,9 @@ I'm a group manager bot maintained by [this wonderful person](tg://user?id={}). 
 
 You Can Contact us by this bot 
 
-This is my user id @anonnsec_bot
+This bot is totally free
 
-i am free etc.
+Help by us this bot in your groups
 
 You can find the list of available commands with /help.
 
