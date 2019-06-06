@@ -19,24 +19,25 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-If you have any questions on how to use me, read /help
+Hi {}, apun ka naam {}! samgha ky
 
-I'm a group manager bot maintained by [this wonderful person](tg://user?id={}). \
+favorite kaam gand me chhta galna maddad chhia /help daba na 
 
-You Can Contact us by this bot 
+yeh hai apun ka malik jo apun ko kilata pilata [wo idhar ich milega](tg://user?id={}). \
 
-This bot is totally free
+Merese milne ka tereko busy rehta hu re
 
-Help by us this bot in your groups
+bunty is totally free samgha ky apun ko bhi iglish ati h
 
-You can find the list of available commands with /help.
+add kr apun ko apne group me 
 
-If you're enjoying using me, and/or would like to help me Give a thanks and use this bot
+Maddad chhi yeh daba /help.
+
+Maza aya? toh thanks bol na loudiaa🤣
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+Hello! apun ka naam *{}*.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 
