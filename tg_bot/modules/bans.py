@@ -41,7 +41,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("Banti hai apun apne boss ko nhi ban krta...")
+        message.reply_text("Banti hai apun apne boss ban nhi hota...")
         return ""
 
     if user_id == bot.id:
@@ -61,13 +61,13 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         chat.kick_member(user_id)
         bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
-        message.reply_text("Banned!")
+        message.reply_text("teri jindagi hai jhand tu hai pagal land🤣!")
         return log
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text('Banned!', quote=False)
+            message.reply_text('teri jindagi jhand hai tu ek chutiya land hai😡!', quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -143,7 +143,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         chat.kick_member(user_id, until_date=bantime)
         bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
-        message.reply_text("Banned! User will be banned for {}.".format(time_val))
+        message.reply_text("Banned! is chututiya ka muh me ab land gya {}.".format(time_val))
         return log
 
     except BadRequest as excp:
