@@ -40,7 +40,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
 
         elif member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chat.id, user_id, can_send_messages=False)
-            message.reply_text("Muted!")
+            message.reply_text("gya iske muh me land🤣!")
             return "<b>{}:</b>" \
                    "\n#MUTE" \
                    "\n<b>Admin:</b> {}" \
@@ -74,13 +74,13 @@ def unmute(bot: Bot, update: Update, args: List[str]) -> str:
 
     if member:
         if is_user_admin(chat, user_id, member=member):
-            message.reply_text("This is an admin, what do you expect me to do?")
+            message.reply_text("yeh toh admin hai laudiiaaa main ky kru?")
             return ""
 
         elif member.status != 'kicked' and member.status != 'left':
             if member.can_send_messages and member.can_send_media_messages \
                     and member.can_send_other_messages and member.can_add_web_page_previews:
-                message.reply_text("This user already has the right to speak.")
+                message.reply_text("iske muh me apun ka land nhi hai re yeh kutta bhok sakta.")
                 return ""
             else:
                 bot.restrict_chat_member(chat.id, int(user_id),
@@ -88,7 +88,7 @@ def unmute(bot: Bot, update: Update, args: List[str]) -> str:
                                          can_send_media_messages=True,
                                          can_send_other_messages=True,
                                          can_add_web_page_previews=True)
-                message.reply_text("Unmuted!")
+                message.reply_text("ab apun ne apna land bahar nikal lia!")
                 return "<b>{}:</b>" \
                        "\n#UNMUTE" \
                        "\n<b>Admin:</b> {}" \
@@ -128,7 +128,7 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if is_user_admin(chat, user_id, member):
-        message.reply_text("I really wish I could mute admins...")
+        message.reply_text("admins mute nhi chote chodu chand...")
         return ""
 
     if user_id == bot.id:
@@ -167,7 +167,7 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
             message.reply_text("Muted for {}!".format(time_val))
             return log
         else:
-            message.reply_text("This user is already muted.")
+            message.reply_text("iske muh me pehle se land hai ree.")
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
