@@ -208,7 +208,7 @@ def check_and_ban(update, user_id, should_message=True):
     if sql.is_user_gbanned(user_id):
         update.effective_chat.kick_member(user_id)
         if should_message:
-            update.effective_message.reply_text("This is a bad person, they shouldn't be here!")
+            update.effective_message.reply_text("Bhag maderchod yha se gbanned user!")
 
 
 @run_async
@@ -239,8 +239,8 @@ def gbanstat(bot: Bot, update: Update, args: List[str]):
     if len(args) > 0:
         if args[0].lower() in ["on", "yes"]:
             sql.enable_gbans(update.effective_chat.id)
-            update.effective_message.reply_text("I've enabled gbans in this group. This will help protect you "
-                                                "from spammers, unsavoury characters, and the biggest trolls.")
+            update.effective_message.reply_text("Gban on. idihar se apun dekh lega "
+                                                "ab apun dalega sabke gand me land😏.")
         elif args[0].lower() in ["off", "no"]:
             sql.disable_gbans(update.effective_chat.id)
             update.effective_message.reply_text("I've disabled gbans in this group. GBans wont affect your users "
