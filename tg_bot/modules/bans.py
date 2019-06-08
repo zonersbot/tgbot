@@ -220,12 +220,12 @@ def kick(bot: Bot, update: Update, args: List[str]) -> str:
 def kickme(bot: Bot, update: Update):
     user_id = update.effective_message.from_user.id
     if is_user_admin(update.effective_chat, user_id):
-        update.effective_message.reply_text("I wish I could... but you're an admin.")
+        update.effective_message.reply_text("Chodu admin bhaag ja laudey mera ky par tu admin hai.")
         return
 
     res = update.effective_chat.unban_member(user_id)  # unban on current user = kick
     if res:
-        update.effective_message.reply_text("No problem.")
+        update.effective_message.reply_text("Ja na land chod chadermod.")
     else:
         update.effective_message.reply_text("Huh? I can't :/")
 
@@ -263,7 +263,7 @@ def unban(bot: Bot, update: Update, args: List[str]) -> str:
         return ""
 
     chat.unban_member(user_id)
-    message.reply_text("Yep, this user can join!")
+    message.reply_text("ab yeh ludiyaa wapas ayega🙄!")
 
     log = "<b>{}:</b>" \
           "\n#UNBANNED" \
