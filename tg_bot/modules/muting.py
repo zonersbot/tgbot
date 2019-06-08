@@ -132,7 +132,7 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
         return ""
 
     if user_id == bot.id:
-        message.reply_text("I'm not gonna MUTE myself, are you crazy?")
+        message.reply_text("Bunty ko mute krega laudiaa tere gand me chhatri kolna hai?")
         return ""
 
     if not reason:
