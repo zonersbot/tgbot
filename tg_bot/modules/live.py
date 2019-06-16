@@ -140,6 +140,6 @@ __mod_name__ = "live"
 
 if __name__ == '__main__':
  	main()
-	_HANDLER = DisableAbleCommandHandler("Live", live)
-
-dispatcher.add_handler(LIVE_HANDLER)
+	
+	
+	
