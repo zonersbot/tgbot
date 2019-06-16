@@ -2,8 +2,8 @@ import subprocess
 from telegram import Update, Bot
 from telegram.ext import run_async, Filters
 
-from IHbot import dispatcher
-from IHbot.modules.disable import DisableAbleCommandHandler
+from tg_bot import dispatcher
+from tg_bot.modules.disable import DisableAbleCommandHandler
 
 def google(bot: Bot, update: Update):
         query = update.effective_message.text.split(" ", 1)
