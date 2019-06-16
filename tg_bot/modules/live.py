@@ -128,7 +128,7 @@ def main():
 			print(commentary(desc))
 			ref = input('\n\nDo you want to refresh:(y/n) ')
 			print('\n')
-
+__mod_name__ = "live"
 
 if __name__ == '__main__':
  	main()
