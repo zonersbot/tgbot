@@ -4,12 +4,12 @@ from typing import List, Optional
 from telegram.error import BadRequest, TelegramError
 from telegram.ext import run_async, CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
-from IHbot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_GBAN
-from IHbot.modules.helper_funcs.chat_status import user_admin, is_user_admin
-from IHbot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from IHbot.modules.helper_funcs.filters import CustomFilters
-from IHbot.modules.helper_funcs.misc import send_to_list
-from IHbot.modules.sql.users_sql import get_all_chats
+from tg_bot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_GBAN
+from tg_bot.modules.helper_funcs.chat_status import user_admin, is_user_admin
+from tg_bot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from tg_bot.modules.helper_funcs.filters import CustomFilters
+from tg_bot.modules.helper_funcs.misc import send_to_list
+from tg_bot.modules.sql.users_sql import get_all_chats
 
 GKICK_ERRORS = {
     "User is an administrator of the chat",
