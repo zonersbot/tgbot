@@ -1,4 +1,9 @@
 from pycricbuzz import Cricbuzz
+from telegram import Update, Bot
+from telegram.ext import run_async, Filters
+
+from tg_bot import dispatcher
+from tg_bot.modules.disable import DisableAbleCommandHandler
 from pprint import pprint
 import json
 
@@ -128,7 +133,13 @@ def main():
 			print(commentary(desc))
 			ref = input('\n\nDo you want to refresh:(y/n) ')
 			print('\n')
+			__help__ = """
+- Reply to a text with /live for live score.
+"""
 __mod_name__ = "live"
 
 if __name__ == '__main__':
  	main()
+	_HANDLER = DisableAbleCommandHandler("Live", live)
+
+dispatcher.add_handler(LIVE_HANDLER)
